@@ -397,7 +397,7 @@ describe('proxyIntegration.routeHandler', () => {
         proxyIntegration(routeConfig, {path: '/', httpMethod: 'GET'}).then(result => {
             expect(result).toEqual({
                 statusCode: 500,
-                body: JSON.stringify({error: "ServerError", message: "Generic error:" + JSON.stringify(incorrectError) }),
+                body: JSON.stringify({error: "ServerError", message: "Server error:" + JSON.stringify(incorrectError) }),
                 headers: expectedCorsHeaders
             });
             done();
